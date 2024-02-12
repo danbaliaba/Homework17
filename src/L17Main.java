@@ -8,8 +8,10 @@ import l17.animal.Cow;
 import l17.animal.Dog;
 
 import javax.sound.midi.SysexMessage;
+import java.util.Arrays;
 
 public class L17Main {
+
     public static void main(String[] args) {
         Dog dog = new Dog (2013, "Alpha");
         Cow cow = new Cow(2005, " Murka");
@@ -18,8 +20,8 @@ public class L17Main {
         Man man = new Man(176, "Daniil");
         Bike bike = new Bike(20, "Green");
         Bus bus = new Bus(18,"Yellow");
-        Car ferr = new Car("Ferrari", "Red", 250);
-        System.out.println(ferr);
+        Car carList = new Car("Ferrari", "Red", 250);
+        System.out.println(carList);
         System.out.println(bus);
         System.out.println(bike);
         System.out.println(man);
@@ -27,5 +29,14 @@ public class L17Main {
         System.out.println(cat);
         System.out.println(cow);
         System.out.println(dog);
+        carList.arrayAdd("Ferrari");
+        carList.arrayAdd("Porsche");
+        carList.arrayAdd("BMW");
+        carList.arrayAdd("Mercedes");
+        carList.arrayAdd("Toyota");
+        carList.arrayAdd("Lamborghini");
+        System.out.println(Arrays.toString(carList.i));
+
+
     }
 }
