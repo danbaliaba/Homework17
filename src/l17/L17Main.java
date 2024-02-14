@@ -1,3 +1,9 @@
+// Д/з к уроку 17 и в классе Car к уроку 19
+
+
+
+package l17;
+
 import l17.transport.Car;
 import l17.transport.Bus;
 import l17.transport.Bike;
@@ -7,7 +13,6 @@ import l17.animal.Cat;
 import l17.animal.Cow;
 import l17.animal.Dog;
 
-import javax.sound.midi.SysexMessage;
 import java.util.Arrays;
 
 public class L17Main {
@@ -21,6 +26,8 @@ public class L17Main {
         Bike bike = new Bike(20, "Green");
         Bus bus = new Bus(18,"Yellow");
         Car carList = new Car("Ferrari", "Red", 250);
+
+
         System.out.println(carList);
         System.out.println(bus);
         System.out.println(bike);
@@ -35,6 +42,7 @@ public class L17Main {
         carList.arrayAdd("Mercedes");
         carList.arrayAdd("Toyota");
         carList.arrayAdd("Lamborghini");
+        carList.arrayAdd("Bugatti");
         System.out.println(Arrays.toString(carList.i));
 
 

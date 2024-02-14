@@ -1,11 +1,12 @@
 package l17.transport;
 
 import java.util.Arrays;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Car {
 
     private int count = 0;
+
+    public int countPublic = count;
     public String[] i = new String[5];
     public String[] arrayofAutos;
     String model, cl;
@@ -20,6 +21,7 @@ public class Car {
 
         i[count] = model;
         count++;
+        countPublic = count;
         if ( count >= i.length)
         {
             i = Arrays.copyOf(i, i.length + 1);
