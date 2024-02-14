@@ -1,12 +1,13 @@
 package l17.animal;
 
-public class Dog {
+public class Dog extends animal{
     String name;
 
     private int nowYear = 2023;
     double bornYear,  realAge;
 
-    public Dog (double bornYear, String name){
+    public Dog (String status, int legsNumber, double bornYear, String name){
+        super(status, legsNumber);
         this.bornYear = bornYear;
         this.name = name;
         realAge = nowYear - this.bornYear;
@@ -22,7 +23,8 @@ public class Dog {
     }
 
 
-    public String toString() { return "Dog Name is " + this.name + ", Dog is " + this.realAge + "y.o.";
+    public String toString(){
+        return "Status= "+this.getStatus()+"|"+"Has "+this.getLegsNumber()+" legs"+"|"+"Name is "+this.name+"|"+"is "+this.realAge+" y.o|";
 
     }
 }

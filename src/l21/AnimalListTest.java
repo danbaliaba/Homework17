@@ -13,7 +13,7 @@ public class AnimalListTest {
     @Test
     public void testNames()
     {
-        Car carsInParkList = new Car ("Audi", "Grey", 240);
+        Car carsInParkList = new Car ("","","","",0);
 
         Assertions.assertEquals(0, carsInParkList.countPublic );
 

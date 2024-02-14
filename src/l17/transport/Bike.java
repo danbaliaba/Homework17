@@ -1,14 +1,15 @@
 package l17.transport;
 
-public class Bike {
+public class Bike extends transport{
     String cl;
     double weight;
 
-    public Bike (double weight, String cl){
+    public Bike (String thickness, String status , double weight, String cl){
+        super (thickness, status);
         this.weight = weight;
         this.cl = cl;
     }
-    public String toString() { return this.weight + " kg" + ", bike colour is " + this.cl ;
-
+    public String toString(){
+        return "Status = "+this.getStatus()+"|"+"Thickness is "+this.getThickness()+"|"+this.weight+"kg|"+"colour is "+this.cl;
     }
 }

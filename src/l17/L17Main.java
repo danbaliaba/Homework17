@@ -4,6 +4,7 @@
 
 package l17;
 
+
 import l17.transport.Car;
 import l17.transport.Bus;
 import l17.transport.Bike;
@@ -18,24 +19,16 @@ import java.util.Arrays;
 public class L17Main {
 
     public static void main(String[] args) {
-        Dog dog = new Dog (2013, "Alpha");
-        Cow cow = new Cow(2005, " Murka");
-        Cat cat = new Cat(2000, "Vasya");
-        Woman woman = new Woman(160,"Christina");
-        Man man = new Man(176, "Daniil");
-        Bike bike = new Bike(20, "Green");
-        Bus bus = new Bus(18,"Yellow");
-        Car carList = new Car("Ferrari", "Red", 250);
+        Dog dog = new Dog ("alive", 4, 2018, "Sharik");
+        Cow cow = new Cow("alive" , 4, "Murka", 2015);
+        Cat cat = new Cat("dead", 4, 1999, "Kot");
+        Woman woman = new Woman(2,2,"alive", 45, "Masha");
+        Man man = new Man(2,2, "alive", 80, "Alex");
+        Bike bike = new Bike("bad", "not alive", 26, "green");
+        Bus bus = new Bus("good", "not alive ", 100, "yellow");
+        Car carList = new Car("good", "not alive", "Range Rover", "Black", 200) ;
 
 
-        System.out.println(carList);
-        System.out.println(bus);
-        System.out.println(bike);
-        System.out.println(man);
-        System.out.println(woman);
-        System.out.println(cat);
-        System.out.println(cow);
-        System.out.println(dog);
         carList.arrayAdd("Ferrari");
         carList.arrayAdd("Porsche");
         carList.arrayAdd("BMW");
