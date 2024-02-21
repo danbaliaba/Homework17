@@ -3,7 +3,26 @@ package l26;
 public class l26HW {
     public static void main(String[] args) {
 
-        Shapes rectangle = new Rectangle("red", 2,3 );
+        Shapes[] array = {
+                new Rectangle("red", 2,3 ),
+                new Circle("white", 5),
+                new Rhombus("green", 6),
+                new Square("black", 7),
+                new Triangle("yellow", 8,9,10)
+        };
+
+        for (Shapes shapes : array)
+        {
+            shapes.setColour();
+            shapes.draw();
+            shapes.findArea();
+            shapes.findPerimeter();
+            System.out.println(" ");
+            System.out.println(" ");
+
+        }
+
+    /*    Shapes rectangle = new Rectangle("red", 2,3 );
         Shapes circle = new Circle("white", 5);
         Shapes rhombus = new Rhombus("green", 6);
         Shapes square = new Square("black", 7);
@@ -48,7 +67,11 @@ public class l26HW {
         triangle.findPerimeter();
         triangle.draw();
         triangle.findArea();
-        triangle.setColour();
+        triangle.setColour();*/
+
+
+
+
 
     }
 
