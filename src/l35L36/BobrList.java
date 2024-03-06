@@ -1,7 +1,16 @@
 package l35L36;
 
 
-import java.util.*;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Comparator;
+import java.util.Collections;
+import java.util.Objects;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 public class BobrList {
 
@@ -58,10 +67,6 @@ public class BobrList {
             return bobr1.getName().compareTo(bobr2.getName());
         }
     }
-    public static class RelativesCountComparator implements Comparator<Bobr> {
-        @Override
-        public int compare(Bobr bobr1, Bobr bobr2){return Math.max(bobr1.getRelativesCount(), bobr2.getRelativesCount());}
-    }
     public void addBobr(String name, int age, int relativesCount){
         bobrList.add(new Bobr(name, age, relativesCount));
     }
@@ -95,8 +100,11 @@ public class BobrList {
         }
         System.out.println(bobrHashSet);
     }
-
-
-
-
+    public static void Iterator(){
+        Iterator<Bobr> bobrIterator = bobrList.iterator();
+        while(bobrIterator.hasNext())
+        {
+            System.out.println(bobrIterator.next());
+        }
+    }
 }

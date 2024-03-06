@@ -15,8 +15,10 @@ public class Main {
         bobrList.showList();
         bobrList.sortBobr();
 
-        System.out.println(BobrList.setHashMap());
-        BobrList.setHashSet();
+       System.out.println(BobrList.setHashMap());
+       BobrList.setHashSet();
+
+        BobrList.Iterator();
 
 
 
