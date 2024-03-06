@@ -15,7 +15,8 @@ public class Main {
         bobrList.showList();
         bobrList.sortBobr();
 
-        BobrList.setHashSet("Ivan");
+        System.out.println(BobrList.setHashMap());
+        BobrList.setHashSet();
 
 
 

@@ -4,7 +4,7 @@ package l35L36;
 import java.util.*;
 
 public class BobrList {
-    private static int indexOfBobr;
+
     static List<Bobr> bobrList = new ArrayList<>();
     public void showList(){
         System.out.println(bobrList);
@@ -39,6 +39,18 @@ public class BobrList {
             return "Hi I am " + this.name + " I am " + this.age + " and have " + this.relativesCount + " Relatives";
         }
 
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Bobr bobr = (Bobr) o;
+            return Objects.equals(name, bobr.name);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(name);
+        }
     }
     public static class NameComporator implements Comparator<Bobr> {
         @Override
@@ -52,33 +64,34 @@ public class BobrList {
     }
     public void addBobr(String name, int age, int relativesCount){
         bobrList.add(new Bobr(name, age, relativesCount));
-        indexOfBobr++;
     }
     public void sortBobr(){
         Collections.sort(bobrList);
         System.out.println("Collection sort" + bobrList);
+
+        Collections.sort(bobrList, new NameComporator());
+        System.out.println("Collection sorted by name " + bobrList);
+
+        Collections.sort(bobrList,(bobr1, bobr2) -> Integer.compare(bobr1.getRelativesCount(),bobr2.getRelativesCount()));
+        System.out.println("Collection sorted by the number of relatives " + bobrList);
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
+    public static Map<String, Integer> setHashMap(){
+        Map<String, Integer> bobrHashMap = new HashMap<>();
+
+        for (Bobr bobr : bobrList)
+        {
+            bobrHashMap.put(bobr.getName(), bobr.getRelativesCount());
+        }
+        return bobrHashMap;
     }
 
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
-
-    public static void setHashSet(String name){
+    public static void setHashSet(){
         Set<Bobr> bobrHashSet = new HashSet<>();
 
         for (Bobr bobr : bobrList)
         {
             bobrHashSet.add(bobr);
-            if (bobr.getName().equals(name))
-            {
-                bobrHashSet.remove(bobr);
-            }
         }
         System.out.println(bobrHashSet);
     }
