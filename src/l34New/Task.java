@@ -41,4 +41,7 @@ public class Task {
     public int hashCode() {
         return id;
     }
+    public String toString(){
+        return this.title + " | " + this.id + " | " + this.status;
+    }
 }

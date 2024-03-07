@@ -1,6 +1,8 @@
 package l34New;
+import l34New.Task;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class TaskManager {
@@ -24,5 +26,19 @@ public class TaskManager {
         }
         return null;
     }
-   // public Task
+    public Task changeStatus(int id, TaskStatus status)
+    {
+        for (Task task : tasks)
+        {
+            if(task.getId()!=id){continue;}
+            else {
+                task.setStatus(status);
+                return task;
+            }
+        }
+        return null;
+    }
+    public void showList(){
+        System.out.println(tasks);
+    }
 }
